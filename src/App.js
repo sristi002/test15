@@ -15,14 +15,13 @@ const App = () => {
 
         if (targetElement) {
           window.scrollTo({
-            top: targetElement.offsetTop - 35,
+            top: targetElement.offsetTop - 100,
             behavior: 'smooth',
           });
         }
       });
     });
 
-    
 
     document.getElementById('open-popup').addEventListener('click', function () {
       document.getElementById('popup').style.display = 'block';
@@ -31,6 +30,8 @@ const App = () => {
     document.getElementById('close-popup').addEventListener('click', function () {
       document.getElementById('popup').style.display = 'none';
     });
+
+    
 
     document.addEventListener('DOMContentLoaded', function () {
       const submitButton = document.getElementById('open-popup2');
@@ -63,8 +64,8 @@ const App = () => {
           Adopt<span>Me</span>
         </div>
         <div className="menu">
-          <a href="#">Pets</a>
-          <a href="#">Pet Services</a>
+          <a href="#pets">Pets</a>
+          <a href="#petservices">Pet Services</a>
           <a href="#aboutus">About Us</a>
           <a href="#joinus">Join Us</a>
           <a href="#contact">Contact</a>
@@ -126,22 +127,22 @@ const App = () => {
       </div>
     </div>
 
-    <div className="one">
+    <div className="one" id="pets">
         <p className="pone">
           Find your new furry friend and bring endless joy into your life. Adopt a pet today and make a loving companion's dream come true.
         </p>
-        <button className="bone">
-          <p>Adopt a Pet</p>
+        <button className="bone" id="adopt">
+        <Link to="/Adoption" className="LinkStyle">Adopt a Pet</Link>
         </button>
         <br />
-        <p className="ptwo">
+        <p className="ptwo" >
           Offer your pet a loving home with a responsible, caring owner. Rehoming your pet ensures their happiness and well-being.
         </p>
-        <button className="btwo">
+        <button className="btwo" id >
           <p>Rehome Your Pet</p>
         </button>
       </div>
-      <div className="two">
+      <div className="two" id="petservices">
         <p className="pthree">
           Short-term pet care services are here to provide comfort and care for your furry companions while you're briefly apart.
         </p>
@@ -149,11 +150,7 @@ const App = () => {
         <Link to="/shelter" className="LinkStyle">Find a Shelter for your Pet</Link>
         </button>
       </div>
-      <div className="three">
-        <p className="pfour">Ensure your pet's health and well-being with our dedicated veterinary services.</p>
-        <button className="bfour">Explore Vet Clinics</button>
-      </div>
-      
+
       
       <div>
         <br />
@@ -235,7 +232,7 @@ const App = () => {
               Connect with us for any queries or support.
             </span>
             <br />
-            We are dedicated to providing you with a hassle-free adoption process 24X7. Our only goal is to provide you with a pawsitive experience all the way.
+            We are dedicated to provide you with a hassle-free adoption process 24X7. Our only goal is to provide you with a pawsitive experience all the way.
           </p>
           <i className="fa fa-whatsapp"></i>
           <i className="fa fa-instagram"></i>

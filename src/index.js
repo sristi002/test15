@@ -4,13 +4,23 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import App from './App';
 import FAQ from './faq';
 
-import Shelter from './shelter';
 
+
+import Adopt from './Adoption';
+import AdoptaDog from './AdoptaDog';
+import AdoptaCat from './AdoptaCat';
+import Petpage from './Petpage';
+import Adoptform from './Adoptform';
 ReactDOM.render(
   <Router>
     <Routes>
       <Route path="/faq" element={<FAQ />} />
-      <Route path="/shelter" element={<Shelter />} />
+      <Route path="/AdoptaDog" element={<AdoptaDog/>} />
+      <Route path="/AdoptaCat" element={<AdoptaCat/>} />
+      <Route path="/Petpage" element={<Petpage/>} />
+      <Route path="/Adoptform" element={<Adoptform/>} />
+      <Route path="/Adoption" element={<Adopt />} />
+      
       <Route path="/" element={<App />} />
     </Routes>
   </Router>,
