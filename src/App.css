@@ -458,7 +458,7 @@ font-size: 20px;
 margin-left: 150px;
 font-size: 20px;
 }
-input{
+.inst{
 width: 600px;
 height: 50px;
 padding: 10px;
@@ -590,4 +590,16 @@ background-color: rgb(1, 98, 1);
 .LinkStyle {
   color: inherit; /* Use the default text color */
   text-decoration: none; /* Remove underline */
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+}
+
+.home-icon {
+  font-size: 20px; 
+  color: black; 
+  
+  
 }

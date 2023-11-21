@@ -1,6 +1,8 @@
 
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 import './App.css'; 
 
 
@@ -9,7 +11,6 @@ const App = () => {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
 
@@ -22,7 +23,6 @@ const App = () => {
       });
     });
 
-
     document.getElementById('open-popup').addEventListener('click', function () {
       document.getElementById('popup').style.display = 'block';
     });
@@ -31,29 +31,17 @@ const App = () => {
       document.getElementById('popup').style.display = 'none';
     });
 
-    
+    document.getElementById('myForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      // Show the overlay and popup when the form is submitted
+      document.getElementById('overlay').style.display = 'block';
+      document.getElementById('popup2').style.display = 'block';
+    });
 
-    document.addEventListener('DOMContentLoaded', function () {
-      const submitButton = document.getElementById('open-popup2');
-      const closePopupButton = document.querySelector('.bpop2');
-      const popup = document.getElementById('popup2');
-      const overlay = document.getElementById('overlay');
-
-      document.getElementById("myForm").addEventListener("submit", function (event) {
-        event.preventDefault();
-    
-        submitButton.addEventListener('click', function () {
-          // Show the overlay and popup when the "Submit" button is clicked
-          overlay.style.display = 'block';
-          popup.style.display = 'block';
-        });
-        });
-
-      closePopupButton.addEventListener('click', function () {
-        // Hide the overlay and popup when the "Close" button is clicked
-        overlay.style.display = 'none';
-        popup.style.display = 'none';
-      });
+    document.querySelector('.bpop2').addEventListener('click', function () {
+      // Hide the overlay and popup when the "Close" button is clicked
+      document.getElementById('overlay').style.display = 'none';
+      document.getElementById('popup2').style.display = 'none';
     });
   }, []);
 
@@ -63,6 +51,9 @@ const App = () => {
         <div className="logo">
           Adopt<span>Me</span>
         </div>
+       
+
+
         <div className="menu">
           <a href="#pets">Pets</a>
           <a href="#petservices">Pet Services</a>
@@ -75,6 +66,13 @@ const App = () => {
         <button id="open-popup" className="open-popup">
           Login
         </button>
+
+        <div className="home-container">
+        <a href="/">
+            <FontAwesomeIcon icon={faHome}   className="home-icon" />
+        
+          </a>
+          </div>
 
         <div id="popup" className="popup">
           <div className="popup-content">
@@ -139,7 +137,8 @@ const App = () => {
           Offer your pet a loving home with a responsible, caring owner. Rehoming your pet ensures their happiness and well-being.
         </p>
         <button className="btwo" id >
-          <p>Rehome Your Pet</p>
+          
+          <Link to="/rehome" className="LinkStyle">Rehome Your Pet</Link>
         </button>
       </div>
       <div className="two" id="petservices">
@@ -147,7 +146,7 @@ const App = () => {
           Short-term pet care services are here to provide comfort and care for your furry companions while you're briefly apart.
         </p>
         <button className="bthree" id="findShelterButton">
-        <Link to="/shelter" className="LinkStyle">Find a Shelter for your Pet</Link>
+        <Link to="/Homeshelter" className="LinkStyle">Find a Shelter for your Pet</Link>
         </button>
       </div>
 
@@ -186,17 +185,17 @@ const App = () => {
             <label htmlFor="Name" className="name">
               Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </label>
-            <input type="text" name="name" id="name" placeholder="Enter Your Name" /><br />
+            <input type="text" name="name" id="name" placeholder="Enter Your Name"  className="inst"/><br />
             <br />
             <label htmlFor="Email" className="mail">
               Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </label>
-            <input type="email" name="Email" id="email" placeholder="Enter Your Email" /><br />
+            <input type="email" name="Email" id="email" placeholder="Enter Your Email"  className="inst"/><br />
             <br />
             <label htmlFor="No" className="phone">
               Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </label>
-            <input type="text" name="No" id="phone" placeholder="Enter Your Phone Number" /><br />
+            <input type="text" name="No" id="phone" placeholder="Enter Your Phone Number"  className="inst"/><br />
             <br />
             <button id="open-popup2" className="bjoin">Submit
               

@@ -43,7 +43,7 @@ const Adoptform = () => {
           </button>
         </form>
       ) : (
-        <div id="thankYou">
+        <div id="thankYou5">
         <p>Thank you! An agent will be in contact soon.</p>
       </div>
     )}

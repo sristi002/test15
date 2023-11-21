@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
   return (
@@ -18,6 +20,12 @@ const Nav = () => {
         <i className="fa fa-search"></i>
         <a href="#">Login</a>
       </div>
+
+      <div className="home-container">
+        <a href="/">
+            <FontAwesomeIcon icon={faHome}   className="home-icon" />
+        </a>
+          </div>
     </nav>
   );
 };

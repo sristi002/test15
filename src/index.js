@@ -3,14 +3,19 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import App from './App';
 import FAQ from './faq';
-
-
+import Rehome from './rehome';
 
 import Adopt from './Adoption';
 import AdoptaDog from './AdoptaDog';
 import AdoptaCat from './AdoptaCat';
 import Petpage from './Petpage';
+
 import Adoptform from './Adoptform';
+import Homeshelter from './Homeshelter';
+import Stay from './Stay';
+import Petshelterform from './Petshelterform';
+import Stayformm from './Stayform';
+
 ReactDOM.render(
   <Router>
     <Routes>
@@ -19,6 +24,11 @@ ReactDOM.render(
       <Route path="/AdoptaCat" element={<AdoptaCat/>} />
       <Route path="/Petpage" element={<Petpage/>} />
       <Route path="/Adoptform" element={<Adoptform/>} />
+      <Route path="/rehome" element={<Rehome/>} />
+      <Route path="/Homeshelter" element={<Homeshelter/>} />
+      <Route path="/Stay" element={<Stay/>} />
+      <Route path="/Petshelterform" element={<Petshelterform/>} />
+      <Route path="/Stayform" element={<Stayformm/>} />
       <Route path="/Adoption" element={<Adopt />} />
       
       <Route path="/" element={<App />} />

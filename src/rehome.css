@@ -1,7 +1,7 @@
 
 
-.container95 {
-    max-width: 600px;
+.container88 {
+    max-width: 800px;
     margin: 100px auto;
     background-color: #fff;
     padding: 20px;
@@ -10,8 +10,8 @@
     margin-bottom: 100px;
 }
 
-h1 {
-    font-size: 24px;
+.heads {
+    font-size: 40px;
 }
 
 form {
@@ -19,21 +19,42 @@ form {
     padding-bottom: 60px;
 }
 
-.specificContactLabel{
+.customLabel22{
     display: block;
     margin-top: 10px;
     font-weight: bold;
 }
 
-.anothername, textarea {
-    width: 90%;
+.selectstyle, input, textarea {
+    width: 70%;
     padding: 10px;
     border: 1.5px solid black;
     border-radius: 5px;
     margin-top: 5px;
 }
 
+.submitform {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
 
+.submitform22:hover {
+    background-color: #0056b3;
+}
+
+#thankYou {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    display: none;
+    color: #009900;
+}
 
 form{
     padding:20px;
@@ -44,8 +65,7 @@ form{
 }
 
 
-
-.submitform{
+button.submitform{
     width: 100px;
     height: 45px;
     background-color: #009900;
@@ -53,11 +73,11 @@ form{
     border-radius: 6px;
     border: none;
     margin-left: 200px;
-    margin-top: 15px;
 }
-.submitform:hover{
+button.submitform:hover{
     background-color: #016e01;
     box-shadow: 0 0 10px black;
 }
-
-
+.photosform{
+    border: none;
+}
