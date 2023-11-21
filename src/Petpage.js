@@ -65,7 +65,7 @@ const Petpage = () => {
     </Link>
       </div>
       <div className="images">
-        <main>
+        <main >
           {/* Images */}
           <img src="staypic1.jpeg" className="slide" alt="" />
           <img src="staypic2.jpeg" className="slide" alt="" />
