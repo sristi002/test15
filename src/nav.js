@@ -14,7 +14,7 @@ const Nav = () => {
         <a href="#">About Us</a>
         <a href="#">Join us</a>
         <a href="#">Contact</a>
-        <a href="faq.html">FAQs</a>
+        <a href="#">FAQs</a>
       </div>
       <div className="icon">
         <i className="fa fa-search"></i>

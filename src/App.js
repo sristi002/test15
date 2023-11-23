@@ -23,13 +23,7 @@ const App = () => {
       });
     });
 
-    document.getElementById('open-popup').addEventListener('click', function () {
-      document.getElementById('popup').style.display = 'block';
-    });
-
-    document.getElementById('close-popup').addEventListener('click', function () {
-      document.getElementById('popup').style.display = 'none';
-    });
+    
 
     document.getElementById('myForm').addEventListener('submit', function (event) {
       event.preventDefault();
@@ -61,51 +55,22 @@ const App = () => {
           <a href="#joinus">Join Us</a>
           <a href="#contact">Contact</a>
           <Link to="/faq">FAQs</Link>
+          
         </div>
 
-        <button id="open-popup" className="open-popup">
+        <div className="icon">
+        <Link to="/Signuppage1" className="pagee">
           Login
-        </button>
+        </Link>
+      </div>
+        
 
-        <div className="home-container">
+         <div className="home-container">
         <a href="/">
             <FontAwesomeIcon icon={faHome}   className="home-icon" />
         
           </a>
           </div>
-
-        <div id="popup" className="popup">
-          <div className="popup-content">
-            <span className="close" id="close-popup">
-              &times;
-            </span>
-            <h2 className="s2">Sign In</h2>
-            <br />
-            <form>
-              <label htmlFor="username">Username:</label>
-              <input
-                type="email"
-                id="username"
-                name="username"
-                required
-                placeholder="Enter Your Username"
-              />
-              <br />
-              <br />
-              <label htmlFor="password">Password:</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                required
-                placeholder="Enter Password"
-              />
-              <br />
-              <br />
-              <button type="submit" className="sub">Submit</button>
-            </form>
-          </div>
-        </div>
       </nav>
 
       
