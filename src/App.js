@@ -25,18 +25,7 @@ const App = () => {
 
     
 
-    document.getElementById('myForm').addEventListener('submit', function (event) {
-      event.preventDefault();
-      // Show the overlay and popup when the form is submitted
-      document.getElementById('overlay').style.display = 'block';
-      document.getElementById('popup2').style.display = 'block';
-    });
-
-    document.querySelector('.bpop2').addEventListener('click', function () {
-      // Hide the overlay and popup when the "Close" button is clicked
-      document.getElementById('overlay').style.display = 'none';
-      document.getElementById('popup2').style.display = 'none';
-    });
+    
   }, []);
 
   return (
@@ -52,7 +41,7 @@ const App = () => {
           <a href="#pets">Pets</a>
           <a href="#petservices">Pet Services</a>
           <a href="#aboutus">About Us</a>
-          <a href="#joinus">Join Us</a>
+          
           <a href="#contact">Contact</a>
           <Link to="/faq">FAQs</Link>
           
@@ -139,35 +128,7 @@ const App = () => {
         </div>
         <br />
         <br />
-        <div className="container6" id="joinus">
-          <p className="pseven">
-            <span className="ssix">Join Us</span>
-          </p>
-          <br />
-          <br />
-
-          <form id="myForm" action="">
-            <label htmlFor="Name" className="name">
-              Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </label>
-            <input type="text" name="name" id="name" placeholder="Enter Your Name"  className="inst"/><br />
-            <br />
-            <label htmlFor="Email" className="mail">
-              Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </label>
-            <input type="email" name="Email" id="email" placeholder="Enter Your Email"  className="inst"/><br />
-            <br />
-            <label htmlFor="No" className="phone">
-              Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </label>
-            <input type="text" name="No" id="phone" placeholder="Enter Your Phone Number"  className="inst"/><br />
-            <br />
-            <button id="open-popup2" className="bjoin">Submit
-              
-            </button>
-            
-          </form>
-        </div>
+        
       </div>
     
 

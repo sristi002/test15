@@ -1,14 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import './Signuppage1.css'; // Import your CSS file
 import Nav from './nav';
 import Footer from './footer';
 
-const Signuppage1 = () => {
-  const handleLogin = (e) => {
+const Signup02 = () => {
+  const handleSignUp = (e) => {
     e.preventDefault();
+    const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
+    const phoneNumber = document.getElementById('phoneNumber').value;
     const password = document.getElementById('password').value;
+
+    localStorage.setItem('signupEmail', email);
+    localStorage.setItem('signupPassword', password);
 
     // Simulating storing user data in URL query parameters (not recommended for sensitive info)
     const queryParams = `?email=${email}&password=${password}`;
@@ -16,12 +21,13 @@ const Signuppage1 = () => {
     // Display popup after login (you can modify this logic)
     document.getElementById('popup').style.display = 'block';
 
+    
+
     // Redirect to main page after displaying the popup (with username and password in URL)
     setTimeout(() => {
-      window.location.href = `/?${queryParams}`; // Redirect to main page with username and password in URL after 2 seconds (adjust delay as needed)
-    }, 2000); // 2000 milliseconds (2 seconds) delay before redirecting
-  };
-
+        window.location.href = `/Signuppage1?password=${password}&url=${queryParams}`;
+      }, 2000); // 2000 milliseconds (2 seconds) delay before redirecting
+    };
   return (
     <>
       <div className="wrapper123">
@@ -29,22 +35,19 @@ const Signuppage1 = () => {
         <div className="container123-wrapper">
           <div className="container123" id="container123">
             <div className="form-container123 log-in-container123">
-              <form onSubmit={handleLogin} className='formclass123'>
-                <h1 className="header123">Login</h1>
-                <div className="social-container123">
-                  <a href="#" className="social123"><i className="fa fa-facebook fa-2x"></i></a>
-                  <a href="#" className="social123"><i className="fab fa fa-twitter fa-2x"></i></a>
-                </div>
-                <span>or use your account</span>
+            <form onSubmit={handleSignUp} className='formclass123'>
+                <h1 className="header123">Sign Up</h1>
                 
+                
+                <input type="name" id="name" placeholder="Name" className="email-input" />
                 <input type="email" id="email" placeholder="Email" className="email-input" />
+                
+                <input type="text" id='phoneNumber' placeholder="Phone Number" className="email-input" />
                 <input type="password" id="password" placeholder="Password" className="email-input" />
-                <div className="signup-link">
-              <p><span className='white'>cfnjmfjvmjfjvmjkfmvf</span> New user?<Link to="/Signup02">Sign Up</Link></p>
-            </div>
+                <input type="password" id="password" placeholder="Re-Enter Password" className="email-input" />
                 <br />
                 <br />
-                <button type="submit" className='budesign'>Log In</button>
+                <button type="submit" className='budesign'>Sign-Up</button>
               </form>
              
             </div>
@@ -65,6 +68,4 @@ const Signuppage1 = () => {
   );
 };
 
-export default Signuppage1;
-
-
+export default Signup02;
