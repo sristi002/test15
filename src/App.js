@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import './App.css'; 
 
+import axios from 'axios';
+
 
 const App = () => {
   useEffect(() => {
@@ -23,6 +25,13 @@ const App = () => {
       });
     });
 
+    axios.get('https://deployyyy.onrender.com') // Replace with your server endpoint
+      .then(response => {
+        console.log('Response:', response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
     
 
     
